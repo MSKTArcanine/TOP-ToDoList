@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+html {
+  box-sizing: inherit;
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+/* NAV */
+nav {
+  height: 8vh;
+}
+#flexDiv {
+  padding: 0 0.523% 0 0.523%;
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  justify-content: space-between;
+}
+#projectsDiv {
+  width: 87.5%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#projectButtonDiv {
+  width: 7.8%;
+}
+#projectsDiv .projectCard {
+  height: 100%;
+  flex: 1;
+  max-width: 25%;
+  font-size: 2vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projectButtonDiv {
+  font-size: 5vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* MAIN */
+main {
+  height: calc(80vh - 2px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: auto;
+  width: 100%;
+}
+/* LES BOUTTONS POUR CHANGER LES VALUES */
+main .flexLayout {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  max-width: 84%;
+  gap: 18px;
+}
+.flexLayout button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* LE DISPLAY */
+main .mainFrame {
+  width: 100%;
+  height: 59%;
+  max-width: 84%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-items: center;
+  gap: 18px;
+}
+
+main .flexLayout * {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vmax;
+}
+
+/* DISPLAY A GAUCHE */
+main .mainFramePropLayout {
+  width: 31%;
+  margin: 0.9vh 0 0.9vh 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+.props {
+  flex: 1;
+  height: 20%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vmax;
+}
+.descValue {
+  font-size: 1.5vmax;
+}
+/* DISPLAY A DROITE */
+main .mainFrameGridLayout {
+  width: 62%;
+  margin: 0.9vh 0 0.9vh 0;
+  font-size: 2vmax;
+  overflow: auto;
+}
+form {
+  width: 100%;
+  height: 100%;
+}
+label {
+  display: block;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+label span {
+  padding: 0 1rem 0 1rem;
+  text-align: justify;
+  flex: 8;
+}
+label button {
+  display: block;
+  font-size: 1.5vmax;
+  flex: 1;
+  background-color: transparent;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.mainFrameGridLayout input {
+  width: 2vmax;
+  height: 2vmax;
+  flex: 1;
+  margin: 1rem;
+}
+/* NOTES */
+footer {
+  height: calc(12vh - 2px);
+}
+/* LES 3 BOUTTONS EN BAS */
+.buttonsDiv {
+  position: absolute;
+  top: 81.5vh;
+  margin: auto;
+}
+.buttonsDiv button {
+  font-size: 2vmax;
+}

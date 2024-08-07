@@ -3,5 +3,81 @@
   <head>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <div id="flexDiv">
+        <div id="projectsDiv">
+          <div class="projectCard">1</div>
+          <div class="projectCard">2</div>
+          <div class="projectCard">3</div>
+          <div class="projectCard">4</div>
+          <div class="projectCard">5</div>
+          <div class="projectCard">6</div>
+          <div class="projectCard">7</div>
+          <div class="projectCard">8</div>
+          <div class="projectCard">9</div>
+          <div class="projectCard">10</div>
+          <div class="projectCard">11</div>
+          <div class="projectCard">12</div>
+        </div>
+        <div id="projectButtonDiv">+</div>
+      </div>
+    </nav>
+    <main>
+      <div class="flexLayout">
+        <div>
+          <button class="buttonTitle">TITLE</button>
+        </div>
+        <div>
+          <button class="buttonDesc">DESCRIPTION</button>
+        </div>
+        <div>
+          <button class="buttonDueDate">DUE DATE</button>
+        </div>
+        <div>
+          <button class="buttonPriority">PRIORITY</button>
+        </div>
+        <div>
+          <button class="buttonNotes">NOTES</button>
+        </div>
+        <div>
+          <button class="buttonChecklists">CHECKLISTS</button>
+        </div>
+      </div>
+      <div class="mainFrame">
+        <div class="mainFramePropLayout">
+          <div class="props titleProps">
+            <span class="title">Titre: </span>
+            <span class="titleValue">Défaut</span>
+          </div>
+          <div class="props descriptionProps">
+            <span class="desc">Description: </span>
+            <span class="descValue">Défaut</span>
+          </div>
+          <div class="props dueDateProps">
+            <span class="dueDate">Due Date:</span>
+            <span class="dueDateValue">01-01-2000</span>
+          </div>
+          <div class="props priorityProps">
+            <p class="priorityValue">Default Priority</p>
+          </div>
+        </div>
+        <div class="mainFrameGridLayout">
+          <form>
+            <label for="test">
+              <input id="test" type="checkbox" />
+              <span>Défaut</span>
+              <button class="deleteTaskButton">Remove</button>
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="buttonsDiv">
+        <button class="validationButton">Todo done</button>
+        <button class="deleteTodoButton">Delete todo</button>
+        <button class="saveButton">Save</button>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>
