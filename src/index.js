@@ -1,3 +1,4 @@
+import "./style.css";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
