@@ -1,4 +1,8 @@
 import "./style.css";
+import title from "./title";
+import Project from "./projectClass";
+import dueDate from "./dueDate";
+import loadToDisplay from "./loadToDisplay";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
@@ -27,3 +31,14 @@ onDelete => On delete directement depuis le localStorage l'index de l'array
                => Sinon osef, on set la taille à 12 et on fait des trous dans l'array, tfasson c'est pas si grave.
 Bref voila. Pas trop compliqué en somme. LOL.
 */
+export const PROJECTSARRAY = Array(12);
+const TITLEBUTTON = document.querySelector(".buttonTitle");
+const DESCRIPTIONBUTTON = document.querySelector(".buttonDesc");
+const projectDefault = new Project();
+const DUEDATEBUTTON = document.querySelector(".buttonDueDate");
+
+PROJECTSARRAY[0] = projectDefault;
+TITLEBUTTON.addEventListener("click", function () {
+  title(), loadToDisplay();
+});
+DUEDATEBUTTON.addEventListener("click", dueDate);
