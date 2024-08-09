@@ -1,5 +1,6 @@
 import { PROJECTSARRAY } from ".";
+import { activeProject } from "./activeProject";
 export default function () {
-  PROJECTSARRAY[0].setDesc(prompt("Description : "));
+  PROJECTSARRAY[activeProject.active].setDesc(prompt("Description : "));
   console.log(PROJECTSARRAY);
 }

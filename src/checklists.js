@@ -1,4 +1,5 @@
 import { PROJECTSARRAY } from ".";
+import { activeProject } from "./activeProject";
 export default function () {
-  PROJECTSARRAY[0].addCheckList(prompt("title : "));
+  PROJECTSARRAY[activeProject.active].addCheckList(prompt("title : "));
 }

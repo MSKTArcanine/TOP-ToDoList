@@ -8,6 +8,7 @@ import priority from "./priority";
 import notes from "./notes";
 import checklists from "./checklists";
 import StackArray from "./ChecklistStack";
+import projectCardCreator from "./projectCardCreator";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
@@ -36,8 +37,10 @@ onDelete => On delete directement depuis le localStorage l'index de l'array
                => Sinon osef, on set la taille à 12 et on fait des trous dans l'array, tfasson c'est pas si grave.
 Bref voila. Pas trop compliqué en somme. LOL.
 */
-export const PROJECTSARRAY = Array(12);
+export const PROJECTSARRAY = new Array();
 export const STACKARRAY = new StackArray();
+export const PROJECTSDIV = document.querySelector("#projectsDiv");
+export const PLUSBUTTON = document.querySelector("#projectButtonDiv");
 const TITLEBUTTON = document.querySelector(".buttonTitle");
 const DESCRIPTIONBUTTON = document.querySelector(".buttonDesc");
 const projectDefault = new Project();
@@ -66,5 +69,8 @@ NOTESBUTTON.addEventListener("click", function () {
 });
 CHECKLISTSBUTTON.addEventListener("click", function () {
   checklists(), loadToDisplay();
+});
+PLUSBUTTON.addEventListener("click", function () {
+  projectCardCreator(), loadToDisplay();
 });
 loadToDisplay();

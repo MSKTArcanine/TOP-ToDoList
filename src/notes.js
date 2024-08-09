@@ -1,5 +1,6 @@
 import { PROJECTSARRAY } from ".";
+import { activeProject } from "./activeProject";
 export default function () {
-  PROJECTSARRAY[0].setNotes(prompt("Notes : "));
+  PROJECTSARRAY[activeProject.active].setNotes(prompt("Notes : "));
   console.log(PROJECTSARRAY);
 }
