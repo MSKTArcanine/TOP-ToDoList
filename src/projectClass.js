@@ -1,3 +1,4 @@
+import Checklist from "./checklistClass";
 export default class Project {
   constructor(title, desc, dueDate, priority, notes, checklists) {
     this.title = title || "";
@@ -5,7 +6,7 @@ export default class Project {
     this.dueDate = dueDate || "";
     this.priority = priority || "";
     this.notes = notes || "";
-    this.checklists = checklists || "";
+    this.checklists = checklists || new Array();
   }
 
   getTitle = () => this.title;
@@ -21,4 +22,10 @@ export default class Project {
   setPriority = (value) => (this.priority = value);
   setNotes = (value) => (this.notes = value);
   setChecklists = (value) => (this.checklists = value);
+
+  addCheckList = (value) => {
+    const checkListItem = new Checklist();
+    checkListItem.setContent(value);
+    this.checklists.push(checkListItem);
+  };
 }

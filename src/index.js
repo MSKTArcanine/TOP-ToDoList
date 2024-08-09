@@ -3,6 +3,10 @@ import title from "./title";
 import Project from "./projectClass";
 import dueDate from "./dueDate";
 import loadToDisplay from "./loadToDisplay";
+import desc from "./desc";
+import priority from "./priority";
+import notes from "./notes";
+import checklists from "./checklists";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
@@ -36,9 +40,27 @@ const TITLEBUTTON = document.querySelector(".buttonTitle");
 const DESCRIPTIONBUTTON = document.querySelector(".buttonDesc");
 const projectDefault = new Project();
 const DUEDATEBUTTON = document.querySelector(".buttonDueDate");
+const PRIORITYBUTTON = document.querySelector(".buttonPriority");
+const NOTESBUTTON = document.querySelector(".buttonNotes");
+const CHECKLISTSBUTTON = document.querySelector(".buttonChecklists");
 
 PROJECTSARRAY[0] = projectDefault;
 TITLEBUTTON.addEventListener("click", function () {
   title(), loadToDisplay();
 });
-DUEDATEBUTTON.addEventListener("click", dueDate);
+DESCRIPTIONBUTTON.addEventListener("click", function () {
+  desc(), loadToDisplay();
+});
+DUEDATEBUTTON.addEventListener("click", function () {
+  dueDate(), loadToDisplay();
+});
+PRIORITYBUTTON.addEventListener("click", function () {
+  priority(), loadToDisplay();
+});
+NOTESBUTTON.addEventListener("click", function () {
+  notes(), loadToDisplay();
+});
+CHECKLISTSBUTTON.addEventListener("click", function () {
+  checklists(), loadToDisplay();
+});
+loadToDisplay();

@@ -1,5 +1,5 @@
 import { PROJECTSARRAY } from ".";
 export default function () {
-  PROJECTSARRAY[0].setTitle(prompt("title : "));
+  PROJECTSARRAY[0].setNotes(prompt("Notes : "));
   console.log(PROJECTSARRAY);
 }

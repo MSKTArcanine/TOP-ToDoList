@@ -153,6 +153,13 @@ label button {
 /* NOTES */
 footer {
   height: calc(12vh - 2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vmax;
+}
+footer p::before {
+  content: "Notes : ";
 }
 /* LES 3 BOUTTONS EN BAS */
 .buttonsDiv {

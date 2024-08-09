@@ -1,5 +1,4 @@
 import { PROJECTSARRAY } from ".";
 export default function () {
-  PROJECTSARRAY[0].setTitle(prompt("title : "));
-  console.log(PROJECTSARRAY);
+  PROJECTSARRAY[0].addCheckList(prompt("title : "));
 }
