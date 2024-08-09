@@ -1,4 +1,5 @@
 import Checklist from "./checklistClass";
+import { STACKARRAY } from ".";
 export default class Project {
   constructor(title, desc, dueDate, priority, notes, checklists) {
     this.title = title || "";
@@ -22,10 +23,14 @@ export default class Project {
   setPriority = (value) => (this.priority = value);
   setNotes = (value) => (this.notes = value);
   setChecklists = (value) => (this.checklists = value);
+  removeCheckListFromArray = (index) => {
+    this.checklists.splice(index, 1);
+  };
 
   addCheckList = (value) => {
     const checkListItem = new Checklist();
-    checkListItem.setContent(value);
-    this.checklists.push(checkListItem);
+    checkListItem.setContent(value); // Ici c'est la bonne value de CONTENT qui est convertie en ID.
+    this.checklists.push(checkListItem); // Ici on push l'OBJET Checklist. avec bonne ID et bon content
+    STACKARRAY.addToStack(checkListItem.getId()); // Donne l'ID qui est bonne a la stackarray
   };
 }

@@ -1,3 +1,4 @@
+import { STACKARRAY } from ".";
 export default class Checklist {
   constructor() {
     this.content;

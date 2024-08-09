@@ -1,4 +1,5 @@
-import { PROJECTSARRAY } from ".";
+import { PROJECTSARRAY, STACKARRAY } from ".";
+import removeChecklist from "./removeChecklist";
 const titleDisplay = document.querySelector(".titleValue");
 const descDisplay = document.querySelector(".descValue");
 const dueDateDisplay = document.querySelector(".dueDateValue");
@@ -13,6 +14,7 @@ export default function () {
   priorityDisplay.textContent = PROJECTSARRAY[0].getPriority() || "Normal";
   notesDisplay.textContent = PROJECTSARRAY[0].getNotes() || "Aucune";
 
+  checkListDisplay.innerHTML = "";
   if (PROJECTSARRAY[0].getCheckLists().length) {
     PROJECTSARRAY[0].getCheckLists().forEach((e) => {
       const label = document.createElement("label");
@@ -24,6 +26,7 @@ export default function () {
       inputCheckList.setAttribute("type", "checkbox");
       inputCheckList.setAttribute("id", e.getId());
       buttonRemove.classList.add("deleteTaskButton");
+      buttonRemove.addEventListener("click", (e) => removeChecklist(e));
       buttonRemove.textContent = "Remove";
       labelSpan.textContent = e.getContent();
 

@@ -7,6 +7,7 @@ import desc from "./desc";
 import priority from "./priority";
 import notes from "./notes";
 import checklists from "./checklists";
+import StackArray from "./ChecklistStack";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
@@ -36,6 +37,7 @@ onDelete => On delete directement depuis le localStorage l'index de l'array
 Bref voila. Pas trop compliqué en somme. LOL.
 */
 export const PROJECTSARRAY = Array(12);
+export const STACKARRAY = new StackArray();
 const TITLEBUTTON = document.querySelector(".buttonTitle");
 const DESCRIPTIONBUTTON = document.querySelector(".buttonDesc");
 const projectDefault = new Project();
@@ -43,8 +45,10 @@ const DUEDATEBUTTON = document.querySelector(".buttonDueDate");
 const PRIORITYBUTTON = document.querySelector(".buttonPriority");
 const NOTESBUTTON = document.querySelector(".buttonNotes");
 const CHECKLISTSBUTTON = document.querySelector(".buttonChecklists");
+const form = document.querySelector("form");
 
 PROJECTSARRAY[0] = projectDefault;
+form.addEventListener("submit", (e) => e.preventDefault());
 TITLEBUTTON.addEventListener("click", function () {
   title(), loadToDisplay();
 });
