@@ -1,7 +1,10 @@
-import { STACKARRAY } from ".";
+import { PROJECTSARRAY } from ".";
+import { activeProject } from "./activeProject";
 import loadToDisplay from "./loadToDisplay";
 export default function (e) {
-  STACKARRAY.removeFromStack(e.target.parentNode.getAttribute("for"));
+  PROJECTSARRAY[activeProject.active]
+    .getStackArray()
+    .removeFromStack(e.target.parentNode.getAttribute("for"));
   loadToDisplay();
   console.log("done");
 }

@@ -8,6 +8,7 @@ const dueDateDisplay = document.querySelector(".dueDateValue");
 const priorityDisplay = document.querySelector(".priorityValue");
 const notesDisplay = document.querySelector("footer p");
 const checkListDisplay = document.querySelector("form");
+const flexDiv = document.querySelector("#projectsDiv");
 
 export default function () {
   titleDisplay.textContent =
@@ -22,6 +23,7 @@ export default function () {
     PROJECTSARRAY[activeProject.active].getNotes() || "Aucune";
 
   checkListDisplay.innerHTML = "";
+  flexDiv.innerHTML = "";
   if (PROJECTSARRAY[activeProject.active].getCheckLists().length) {
     PROJECTSARRAY[activeProject.active].getCheckLists().forEach((e) => {
       const label = document.createElement("label");
@@ -44,7 +46,6 @@ export default function () {
     });
   }
   if (PROJECTSARRAY.length) {
-    const flexDiv = document.querySelector("#projectsDiv");
     flexDiv.innerHTML = "";
     PROJECTSARRAY.forEach((o) => {
       const projectCard = document.createElement("div");

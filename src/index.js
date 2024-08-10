@@ -11,6 +11,7 @@ import StackArray from "./ChecklistStack";
 import projectCardCreator from "./projectCardCreator";
 import save from "./save";
 import load from "./load";
+import deleteProject from "./deleteProject";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
@@ -52,6 +53,7 @@ const NOTESBUTTON = document.querySelector(".buttonNotes");
 const CHECKLISTSBUTTON = document.querySelector(".buttonChecklists");
 const form = document.querySelector("form");
 const SAVEBUTTON = document.querySelector(".saveButton");
+const DELETEBUTTON = document.querySelector(".deleteTodoButton");
 
 if (!localStorage.length) PROJECTSARRAY[0] = projectDefault;
 form.addEventListener("submit", (e) => e.preventDefault());
@@ -77,6 +79,7 @@ PLUSBUTTON.addEventListener("click", function () {
   projectCardCreator(), loadToDisplay();
 });
 SAVEBUTTON.addEventListener("click", save);
+DELETEBUTTON.addEventListener("click", deleteProject);
 if (!localStorage.length) {
   loadToDisplay();
 } else {
