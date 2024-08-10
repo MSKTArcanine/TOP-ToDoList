@@ -2,14 +2,14 @@ import Checklist from "./checklistClass";
 import { PROJECTSARRAY } from ".";
 import { STACKARRAY } from ".";
 export default class Project {
-  constructor(title, desc, dueDate, priority, notes, checklists) {
-    this.id = PROJECTSARRAY.length;
+  constructor(title, desc, dueDate, priority, notes, id = "") {
+    this.id = id || PROJECTSARRAY.length;
     this.title = title || "";
     this.desc = desc || "";
     this.dueDate = dueDate || "";
     this.priority = priority || "";
     this.notes = notes || "";
-    this.checklists = checklists || new Array();
+    this.checklists = [];
   }
 
   getTitle = () => this.title;
