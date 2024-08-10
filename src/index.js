@@ -9,6 +9,7 @@ import notes from "./notes";
 import checklists from "./checklists";
 import StackArray from "./ChecklistStack";
 import projectCardCreator from "./projectCardCreator";
+import save from "./save";
 /*
 La logique : 
 On fait une classe pour chaque projects obj.
@@ -49,6 +50,7 @@ const PRIORITYBUTTON = document.querySelector(".buttonPriority");
 const NOTESBUTTON = document.querySelector(".buttonNotes");
 const CHECKLISTSBUTTON = document.querySelector(".buttonChecklists");
 const form = document.querySelector("form");
+const SAVEBUTTON = document.querySelector(".saveButton");
 
 PROJECTSARRAY[0] = projectDefault;
 form.addEventListener("submit", (e) => e.preventDefault());
@@ -73,4 +75,5 @@ CHECKLISTSBUTTON.addEventListener("click", function () {
 PLUSBUTTON.addEventListener("click", function () {
   projectCardCreator(), loadToDisplay();
 });
+SAVEBUTTON.addEventListener("click", save);
 loadToDisplay();
